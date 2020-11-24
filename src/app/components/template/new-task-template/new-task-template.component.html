@@ -1,0 +1,8 @@
+<div class="new-task-template">
+  <div class="task-content">
+    <input type="text" (keyup.enter)="addTask()" [(ngModel)]="task.label" placeholder="What do you want to do ?" />
+  </div>
+  <div class="add-new-task-button" (click)="addTask()">
+    <i class="gg-math-plus"></i>
+  </div>
+</div>

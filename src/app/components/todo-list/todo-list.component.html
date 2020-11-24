@@ -1,0 +1,15 @@
+<app-todo-header></app-todo-header>
+
+<app-new-task-template></app-new-task-template>
+
+<div class="list-view">
+  <h2>Open</h2>
+  <ul *ngFor="let task of tasks">
+    <app-task-template *ngIf="task.completed == false" [task]="task"></app-task-template>
+  </ul>
+
+  <h2>Done</h2>
+  <ul *ngFor="let task of tasks">
+    <app-task-template *ngIf="task.completed == true" [task]="task"></app-task-template>
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  margin-left: 20px;
+  color: #0e111f;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}

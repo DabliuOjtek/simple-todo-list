@@ -1,0 +1,27 @@
+header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #0e111f;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.calendar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+h2 {
+  padding-left: 10px;
+  margin: 0;
+}
+
+.gg-calendar {
+  color: #37ceff;
+  --ggs: 1;
+}

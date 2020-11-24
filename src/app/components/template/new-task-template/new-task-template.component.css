@@ -1,0 +1,46 @@
+.new-task-template {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  margin-top: 15px;
+  background-color: #37ceff;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px 0px rgb(159, 226, 250);
+}
+
+.task-content {
+  width: 100%;
+  display: flex;
+}
+
+input {
+  background-color: #37ceff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  width: 100%;
+  word-break: break-word;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.add-new-task-button {
+  padding: 15px;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.gg-math-plus {
+  color: #ffffff;
+  top: 50%;
+  --ggs: 1;
+}

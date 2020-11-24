@@ -1,0 +1,12 @@
+<div class="task-template">
+  <div class="task-content">
+    <div class="complete-task">
+      <i *ngIf="task.completed" (click)="changeTaskStatus()" class="gg-check"></i>
+      <i *ngIf="!task.completed" (click)="changeTaskStatus()" class="gg-shape-circle"></i>
+    </div>
+    <div class="task-label" [class.done]="task.completed">{{task.label}}</div>
+  </div>
+  <div class="remove-task" (click)="removeTask(task)">
+    <i class="gg-math-plus"></i>
+  </div>
+</div>
