@@ -1,24 +1,12 @@
 import { Todo } from './../todo-interface/todo';
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ManageService {
-  tasks: Array<Todo> = [
-    {
-      label: 'Kupić prezenty',
-      completed: false,
-    },
-    {
-      label: 'Zrobić zakupy',
-      completed: false,
-    },
-    {
-      label: 'Wysłać zadanie z todo-listy',
-      completed: true,
-    },
-  ];
+  tasks: Array<Todo> = [];
 
   constructor() {}
 
@@ -27,6 +15,7 @@ export class ManageService {
       label: task.label,
       completed: task.completed,
     });
+    localStorage.setItem('userLocalStorage', JSON.stringify(this.tasks));
   }
 
   removeTask(task: Todo) {
@@ -34,9 +23,16 @@ export class ManageService {
     if (index !== -1) {
       this.tasks.splice(index, 1);
     }
+    localStorage.setItem('userLocalStorage', JSON.stringify(this.tasks));
+  }
+
+  changeTaskStatus(task: Todo) {
+    task.completed = !task.completed;
+    localStorage.setItem('userLocalStorage', JSON.stringify(this.tasks));
   }
 
   getTasks() {
-    return this.tasks;
+    this.tasks = JSON.parse(localStorage.getItem('userLocalStorage')) ?? [];
+    return of(this.tasks);
   }
 }

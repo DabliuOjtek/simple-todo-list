@@ -17,7 +17,7 @@ export class NewTaskTemplateComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addTask() {
+  onAddTask() {
     if (this.task.label !== '') {
       this.manageService.addTask(this.task);
       this.task.label = '';

@@ -14,11 +14,11 @@ export class TaskTemplateComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  changeTaskStatus() {
-    this.task.completed = !this.task.completed;
+  onChangeTaskStatus(task: Todo) {
+    this.manageService.changeTaskStatus(task);
   }
 
-  removeTask(task: Todo) {
+  onRemoveTask(task: Todo) {
     this.manageService.removeTask(task);
   }
 }
