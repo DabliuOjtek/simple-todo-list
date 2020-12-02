@@ -1,0 +1,22 @@
+.remove-task {
+  width: 100%;
+  display: flex;
+}
+
+.clear-button {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin-left: auto;
+  background-color: #F75D4F;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px 0px rgb(250, 159, 159);
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 2px;
+  cursor: pointer;
+}
