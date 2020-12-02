@@ -15,6 +15,7 @@ export class ManageService {
     this.tasks.push({
       label: task.label,
       completed: task.completed,
+      date: Date.now(),
     });
     this.setLocalStorage(this.userLocalStorage);
   }

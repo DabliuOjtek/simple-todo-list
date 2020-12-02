@@ -11,6 +11,7 @@ export class NewTaskTemplateComponent implements OnInit {
   task: Todo = {
     label: '',
     completed: false,
+    date: 0,
   };
 
   constructor(private manageService: ManageService) {}

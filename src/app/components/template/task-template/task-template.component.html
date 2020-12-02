@@ -5,6 +5,7 @@
       <i *ngIf="!task.completed" (click)="onChangeTaskStatus(task)" class="gg-shape-circle"></i>
     </div>
     <div class="task-label" [class.done]="task.completed">{{task.label}}</div>
+    <div class="task-date" [class.done]="task.completed">{{task.date | date:'dd MMM yy hh:mm a'}}</div>
   </div>
   <div class="remove-task" (click)="onRemoveTask(task)">
     <i class="gg-math-plus"></i>

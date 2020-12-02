@@ -24,6 +24,14 @@
   padding: 5px 10px;
 }
 
+.task-date {
+  color: #0e111f;
+  opacity: 0.6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 .remove-task {
   padding: 15px;
   cursor: pointer;
@@ -39,6 +47,11 @@
 }
 
 .task-label.done {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.task-date.done {
   opacity: 0.3;
   text-decoration: line-through;
 }
