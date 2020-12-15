@@ -8,6 +8,7 @@ import { TaskTemplateComponent } from './components/template/task-template/task-
 import { NewTaskTemplateComponent } from './components/template/new-task-template/new-task-template.component';
 import { TodoHeaderComponent } from './components/template/todo-header/todo-header.component';
 import { RemoveTaskTemplateComponent } from './components/template/remove-task-template/remove-task-template.component';
+import { MyPipePipe } from './components/myPipe/my-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,11 @@ import { RemoveTaskTemplateComponent } from './components/template/remove-task-t
     TaskTemplateComponent,
     NewTaskTemplateComponent,
     TodoHeaderComponent,
-    RemoveTaskTemplateComponent
+    RemoveTaskTemplateComponent,
+    MyPipePipe,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,6 +1,7 @@
 import { Todo } from './../todo-interface/todo';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
+import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ export class ManageService {
     this.tasks.push({
       label: task.label,
       completed: task.completed,
-      date: 1576152732, //
+      date: moment.now(),
     });
     this.setLocalStorage(this.userLocalStorage);
   }

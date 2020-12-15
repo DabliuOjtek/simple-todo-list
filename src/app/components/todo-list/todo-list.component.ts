@@ -13,8 +13,10 @@ export class TodoListComponent implements OnInit {
   constructor(private manageService: ManageService) {}
 
   ngOnInit(): void {
-    this.manageService.getTasks().subscribe((task) => {
-      this.tasks = task;
-    });
+    setInterval(() => {
+      this.manageService.getTasks().subscribe((task) => {
+        this.tasks = task;
+      });
+    }, 1000);
   }
 }
